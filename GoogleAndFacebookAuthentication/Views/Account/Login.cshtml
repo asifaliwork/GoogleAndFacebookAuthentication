@@ -33,8 +33,20 @@
                         <a class="btn btn-secondary" asp-action="Register">Register</a>
                     </div>
                 </div>
+                <br />
             </form>
         </section>
+       
+    </div>
+    
+    <div class="col-md-8">
+        <div class="form-group row">
+            <div class="col-md-10 offset-md-2 ">
+                <a class="btn btn-outline-success" asp-controller="Account" asp-action="ExternalLogin">LogIn With Google</a>
+
+                <a class="btn btn-outline-primary" asp-controller="Account" asp-action="FaceBookLogin">LogIn With FaceBook</a>
+            </div>
+        </div>
     </div>
 </div>
 

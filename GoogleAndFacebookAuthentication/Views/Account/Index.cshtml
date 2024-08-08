@@ -2,10 +2,7 @@
 @model IEnumerable<ApplicationUser> 
 @{
     ViewData["Title"] = "USERS";
-}
-@* @if (User.IsInRole(Identity.Utilities.Helper.Admin))
-{ *@
-    
+}    
 
 <h1 class="bg-info text-white">All Users</h1>
 <a asp-action="Register" class="btn btn-secondary">Create new User</a>
@@ -17,14 +14,7 @@
         <tr>
                 <td width ="50%">@user.UserName</td>
                 <td width="50%"> @user.Email </td>
-                
-               @*  <td width="30%">
-                    <div class="w-100 btn-group" role="group">
-                        <a asp-controller="Account" asp-action="Update" asp-route-Id="@user.Id" class="btn btn-primary mx-1">Update</a>
-                        <a asp-controller="Account" asp-action="Delete" asp-route-Id="@user.Id" class="btn btn-danger mx-1">Delete</a>
-                    </div>
-                </td> *@
         </tr>
     }
 </table>
-@* } *@
+

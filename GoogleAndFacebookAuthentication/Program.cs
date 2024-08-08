@@ -1,4 +1,5 @@
 using GoogleAndFacebookAuthentication.Data;
+using GoogleAndFacebookAuthentication.Extensions;
 using GoogleAndFacebookAuthentication.Models.Account;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -12,7 +13,7 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
     options.Lockout.MaxFailedAccessAttempts = 5;
 
 }).AddEntityFrameworkStores<ApplicationDbContext>();
-
+builder.Services.ConfigAuthentication(builder.Configuration);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 

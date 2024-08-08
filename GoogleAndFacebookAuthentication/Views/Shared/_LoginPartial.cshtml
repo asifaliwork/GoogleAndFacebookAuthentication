@@ -19,9 +19,9 @@ else
 {
     <ul class="nav navbar-nav">
         <li class="nav-item">
-            @*@Html.ActionLink("Sign Up","Register","Account",routeValues:null,htmlAttributes:new {id="registerLink"})*@
             <a id="registerLink" class="nav-link "  asp-action="Register" asp-controller="Account">Register</a>
         </li>
         <li><a id="loginLink" class="nav-link " asp-action="Login" asp-controller="Account">Login</a></li>
+        <li><a id="loginLink" class="nav-link " asp-action="SignOutFromGoogleLogin" asp-controller="Account">LogOut</a></li>
     </ul>
 }
